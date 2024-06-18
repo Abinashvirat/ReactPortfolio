@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import bun from '../../public/img/bun.jpg'
 export default function Section1() {
   useEffect(() => {
     // Dynamically create a script element
@@ -58,7 +58,7 @@ export default function Section1() {
         </div>
       </div>
       <div className="rightsection animated-image">
-        <img src="/bun.jpg" alt="Your Image" className="oval-image" />
+        <img src={bun} alt="Your Image" className="oval-image" />
       </div>
     </section>
   );
