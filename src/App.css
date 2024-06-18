@@ -1,38 +1,408 @@
-.App {
-  text-align: center;
+/* styles.css */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global styles */
+body {
+  background-color: rgb(3, 3, 45);
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  height: 80px;
+  background-color: rgb(33, 33, 117);
+  padding: 0 20px;
+}
+
+.navbar-toggler {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a:hover {
+  color: rgb(124, 124, 222);
 }
 
-@keyframes App-logo-spin {
+@media screen and (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.left {
+  font-size: 1.5rem;
+}
+
+.firstsection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 120px 0;
+}
+
+.firstsection > div {
+  width: 30%;
+}
+
+.leftsection {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.rightsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.rightsection img {
+  max-width: 100%;
+  height: auto;
+}
+
+.circular-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.oval-image {
+  width: 70%;
+  margin: 20px;
+  border-radius: 40%;
+  border: 2px solid black;
+}
+
+.purple {
+  color: blueviolet;
+}
+
+#element {
+  color: rgb(189, 81, 81);
+}
+
+.secondsection {
+  max-width: 80vw;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.thirdsection,
+.fourthsection {
+  max-width: 80vw;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main hr {
+  border: 0;
+  background: rgb(116, 93, 137);
+  height: 1.2px;
+  margin: 10px 84px;
+}
+
+.download-cv-container {
+  display: flex;
+  justify-content: center;
+}
+
+.download-cv-btn {
+  padding: 4px 8px;
+  border: 2px solid #4CAF50;
+  background-color: transparent;
+  color: #4CAF50;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  border-radius: 20px;
+}
+
+.download-cv-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.download-cv-btn:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .download-cv-btn {
+    padding: 6px 12px;
+  }
+
+  .firstsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .firstsection > div {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.skills-list ul li {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 8px;
+  background-color: #cc8e8e;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.skills-list ul li:hover {
+  background-color: #5d2525;
+}
+
+.fillup {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 10px 20px;
+  background-color: #59995b;
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.skills-list ul li:hover .fillup {
+  animation: skillHover 0.5s ease-in-out forwards;
+}
+
+@keyframes skillHover {
+  0% {
+    background-color: #59995b;
+    transform: scale(1);
+  }
+  100% {
+    background-color: #8ecae6;
+    transform: scale(1.05);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: calc(25% - 40px);
+  max-width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card:hover {
+  animation: cardHover 0.5s ease-in-out forwards;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card .card-body {
+  padding: 15px;
+}
+
+.card .card-text {
+  font-size: 16px;
+  color: rgb(224, 204, 204);
+  font-weight: bold;
+}
+
+@keyframes cardHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px);
+  }
+}
+
+.view-more-btn {
+  background-color: #1f77b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.view-more-btn:hover {
+  background-color: #145a8b;
+}
+
+h2 {
+  color: #C13584;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* New Animations */
+.animated-text {
+  animation: slideInLeft 1s ease-out;
+}
+
+.animated-image {
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Different Background Animation for thirdsection */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: rgb(3, 3, 45); /* Start color */
+  }
+  50% {
+    background-color: rgb(63, 33, 127); /* Mid-color */
+  }
+  100% {
+    background-color: rgb(3, 3, 45); /* End color */
+  }
+}
+
+.thirdsection {
+  animation: backgroundAnimation 12s infinite alternate; /* Adjust duration and other animation properties as needed */
+}
+
+/* Different Animation for Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
 }
