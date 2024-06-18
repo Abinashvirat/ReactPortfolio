@@ -58,14 +58,20 @@ nav ul li a:hover {
     display: block;
   }
 
+  .right {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .right.active {
+    display: flex;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
   }
 
   nav ul li {
@@ -77,11 +83,13 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
+/* First Section */
 .firstsection {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 120px 0;
+  flex-wrap: wrap;
 }
 
 .firstsection > div {
@@ -151,6 +159,7 @@ main hr {
   margin: 10px 84px;
 }
 
+/* Download CV Button */
 .download-cv-container {
   display: flex;
   justify-content: center;
@@ -194,6 +203,7 @@ main hr {
   }
 }
 
+/* Skills List */
 .skills-list ul li {
   position: relative;
   font-size: 16px;
@@ -233,6 +243,7 @@ main hr {
   }
 }
 
+/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -314,6 +325,7 @@ main hr {
   }
 }
 
+/* View More Button */
 .view-more-btn {
   background-color: #1f77b4;
   color: white;
@@ -395,14 +407,53 @@ h2 {
 /* Different Animation for Social Icons */
 .social-icons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Center the icons horizontally */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  margin: 20px 0; /* Add margin for spacing */
 }
 
 .social-icon {
-  margin: 0 5px;
-  transition: transform 0.3s;
+  margin: 0 10px; /* Adjust margin between icons */
+  font-size: 24px; /* Set icon size */
+  color: white; /* Icon color */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition effect */
 }
 
 .social-icon:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px); /* Move icon up on hover */
+  color: rgb(124, 124, 222); /* Change icon color on hover */
+}
+
+/* Specific styles for each social icon */
+.social-icon.fa-facebook-square:hover {
+  color: #3b5998; /* Facebook color */
+}
+
+.social-icon.fa-twitter-square:hover {
+  color: #1da1f2; /* Twitter color */
+}
+
+.social-icon.fa-linkedin:hover {
+  color: #0077b5; /* LinkedIn color */
+}
+
+.social-icon.fa-github-square:hover {
+  color: #171515; /* GitHub color */
+}
+
+.social-icon.fa-instagram-square:hover {
+  color: #e4405f; /* Instagram color */
+}
+
+.social-icon.fa-stack-overflow:hover {
+  color: #f48024; /* Stack Overflow color */
+}
+
+.social-icon.fa-medium-square:hover {
+  color: #02b875; /* Medium color */
 }
