@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import bun from '../../public/img/bun.jpg'
+import bun from '../img/bun.jpg'
 export default function Section1() {
   useEffect(() => {
     // Dynamically create a script element
