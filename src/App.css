@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset styles */
 * {
   margin: 0;
@@ -404,21 +402,21 @@ h2 {
   animation: backgroundAnimation 12s infinite alternate; /* Adjust duration and other animation properties as needed */
 }
 
-/* Different Animation for Social Icons */
+/* Aligning social-icons */
 .social-icons {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  margin: 20px 0; /* Add margin for spacing */
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 20px; /* Adjust the gap between icons */
+  padding-top: 20px;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  margin: 20px 0; /* Add margin for spacing */
+@media screen and (max-width: 768px) {
+  .social-icons {
+    justify-content: center; /* Center icons on smaller screens */
+  }
 }
 
 .social-icon {
-  margin: 0 10px; /* Adjust margin between icons */
   font-size: 24px; /* Set icon size */
   color: white; /* Icon color */
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition effect */
@@ -430,11 +428,11 @@ h2 {
 }
 
 /* Specific styles for each social icon */
-.social-icon.fa-facebook-square:hover {
+.social-icon.fa-facebook:hover {
   color: #3b5998; /* Facebook color */
 }
 
-.social-icon.fa-twitter-square:hover {
+.social-icon.fa-twitter:hover {
   color: #1da1f2; /* Twitter color */
 }
 
@@ -442,18 +440,6 @@ h2 {
   color: #0077b5; /* LinkedIn color */
 }
 
-.social-icon.fa-github-square:hover {
-  color: #171515; /* GitHub color */
-}
-
-.social-icon.fa-instagram-square:hover {
+.social-icon.fa-instagram:hover {
   color: #e4405f; /* Instagram color */
-}
-
-.social-icon.fa-stack-overflow:hover {
-  color: #f48024; /* Stack Overflow color */
-}
-
-.social-icon.fa-medium-square:hover {
-  color: #02b875; /* Medium color */
 }

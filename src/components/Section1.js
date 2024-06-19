@@ -37,7 +37,7 @@ export default function Section1() {
         <div>
           <div>and I am a passionate Developer.</div>
           <span id="element"></span>
-          <div className="social-icons" style={{ paddingTop: '20px' }}>
+          <div className="social-icons">
             <a href="#" className="social-icon">
               <i className="fab fa-twitter" style={{ color: '#1DA1F2' }}> </i>
             </a>

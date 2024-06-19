@@ -1,5 +1,5 @@
 import React from 'react';
-
+import dev from '../img/dev.png';
 export default function Section2() {
   return (
     <section className="thirdsection" id="About">
@@ -10,7 +10,7 @@ export default function Section2() {
       <br />
       <div className="about-content">
         <div className="leftsection2">
-          <img src="dev.png" alt="Your Image" style={{ width: '200px', height: 'auto' }} />
+          <img src={dev} alt="Your Image" style={{ width: '200px', height: 'auto' }} />
         </div>
         <br />
         <br />
