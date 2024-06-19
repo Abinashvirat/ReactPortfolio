@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
-import bun from '../img/bun.jpg'
+import bun from '../img/bun.jpg';
+import abinashPDF from '../img/Abinash.pdf'; // Import the PDF file
+
 export default function Section1() {
   useEffect(() => {
     // Dynamically create a script element
@@ -37,21 +39,21 @@ export default function Section1() {
           <span id="element"></span>
           <div className="social-icons" style={{ paddingTop: '20px' }}>
             <a href="#" className="social-icon">
-              <i className="fab fa-twitter" style={{ color: '#1DA1F2', margin: '5px' }}> </i>
+              <i className="fab fa-twitter" style={{ color: '#1DA1F2' }}> </i>
             </a>
             <a href="#" className="social-icon">
-              <i className="fab fa-instagram" style={{ color: '#C13584', margin: '5px' }}> </i>
+              <i className="fab fa-instagram" style={{ color: '#C13584' }}> </i>
             </a>
             <a href="#" className="social-icon">
-              <i className="fab fa-linkedin" style={{ color: '#0A66C2', margin: '5px' }}> </i>
+              <i className="fab fa-linkedin" style={{ color: '#0A66C2' }}> </i>
             </a>
             <a href="#" className="social-icon">
-              <i className="fab fa-facebook" style={{ color: '#1877F2', margin: '5px' }}> </i>
+              <i className="fab fa-facebook" style={{ color: '#1877F2' }}> </i>
             </a>
           </div>
           <div style={{ marginTop: '20px' }}>
             <br />
-            <a href="/Abinash.pdf" download className="download-cv-btn">
+            <a href={abinashPDF} download className="download-cv-btn">
               Download CV
             </a>
           </div>
